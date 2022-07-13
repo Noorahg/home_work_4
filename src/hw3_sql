@@ -1,0 +1,16 @@
+select manufacturer from products where manufacturer not like 'HTC';
+select price from products where price < 75000;
+select price from products where price >= 46000;
+SELECT * FROM products ORDER BY price DESC LIMIT 2;
+SELECT product_name FROM products ORDER BY price LIMIT 1;
+select max(price) from products;
+select min(price) from products;
+SELECT * FROM products WHERE product_count = true;
+SELECT * FROM products WHERE product_count = false;
+select * from products order by price ;
+select * from products order by price desc;
+select sum(price) from products;
+SELECT manufacturer, COUNT(*) AS productCount
+FROM products
+GROUP BY manufacturer
+HAVING COUNT(*) <=2;
